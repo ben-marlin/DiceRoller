@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     // calculates p! / s! = (s+1)*(s+2)*...*(p-1)*p
-    public static int perm(int p, int s) {
+    private static int perm(int p, int s) {
         // set product to 1 in case p == s
         int product = 1;
 
@@ -16,6 +16,7 @@ public class Main {
             product *= index + 1;
         }
 
+        // every method ends with a return statement
         return product;
     }
 
@@ -24,7 +25,7 @@ public class Main {
         // I like to instantiate this at the start
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("This program calculates permutations - how many subgroups can be formed from a population.");
+        System.out.println("This program calculates permutations - how many ordered subgroups can be formed from a population.");
 
         System.out.print("What is the size of the population?  ");
         int pop = scan.nextInt();
